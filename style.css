@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+:root{
+ --purple: #5280e2;
+ --green: #15cdcb; 
+ --bg-dark:#212226;  
+ --menu-height:75px
+}
+
+/*--------------CONFIGURAÇÃO GERAL------------------------*/
+
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    margin :0;
+}
+
+body, button, input, select, textarea {
+    font-family: 'poppins' ,sans-serif;
+    color:white;  
+    background: #212226;
+}
+
+h1{
+    font-size:44px;
+}
+
+h2{
+    font: size 24px;
+}
+
+h1, h2{
+    margin: 0;
+    font-weight: 400;
+}
+
+button{
+    background: var(--purple);
+    border: 0;
+    border-radius:16px;
+    padding: 8px 35px;
+    color:white;
+    font-weight:bold;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+p {
+    color: var(--light-gray);
+
+}
+
+/*---------------------------HEADER-----------------------*/
+header {
+    height: calc(100vh - var(--menu-height));  /*toda a  altura da tela quando carrega 100vh  - a altura da nav 65px*/
+    display: flex;/*alinha o header verticalmente, combinado com o height fit content e depois align item center*/
+    align-items: center;
+}
+
+header .container {
+    width: 50%;
+    height: fit-content;
+    padding: 0 100px;
+    
+}
+
+header .container h1{
+    color: var(--green);
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--menu-height);
+    background: var(--bg-dark);
+    padding: 0 100px;
+    position: sticky; /*mantem o menu fixo quando o scrool sobe*/
+    top: 0
+}
+
+nav img{
+    height: 65px;
+    
+
+}
+
+nav ul a{
+    font-size: 20px;
+    color: var(--green);
+    text-decoration: none;
+    margin: 0 35px;
+}
+
+section{
+    height:1500px;
+    background:#5280e2
+}
