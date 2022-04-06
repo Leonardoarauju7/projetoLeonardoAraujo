@@ -5,7 +5,7 @@
  --purple: #5280e2;
  --green: #15cdcb; 
  --bg-dark:#212226;  
- --menu-height:75px
+ --menu-height:75px;
 }
 
 /*--------------CONFIGURAÇÃO GERAL------------------------*/
@@ -48,6 +48,14 @@ button{
     margin-top: 40px;
 }
 
+.title-purple{
+    color: var(--purple)
+}
+
+.title-green {
+  color: var(--green);
+}
+
 p {
     color: var(--light-gray);
 
@@ -71,9 +79,6 @@ header .container img {
     display: none;
 }
 
-header .container h1{
-    color: var(--green);
-}
 
 
 nav {
@@ -84,7 +89,7 @@ nav {
     background: var(--bg-dark);
     padding: 0 100px;
     position: sticky; /*mantem o menu fixo quando o scrool sobe*/
-    top: 0
+    top: 0;
 }
 
 nav img{
@@ -110,9 +115,27 @@ nav ul a svg {
     display:none;
 }
 
-section{
-    height:1500px;
-    background:#5280e2;
+.about-me{
+    display:flex;
+    padding: 100px;
+}
+
+.about-me .container{
+    width: 50%;
+    padding-right: 50px;
+}
+
+/* tamanho do container que abriga a imagem é de 50% da tela */
+.about-me .img-container{
+    width: 50%;
+    text-align: center;
+}
+
+/* tamanho da imagem ocupando o espaço do container 100% do espaço */
+.about-me .img-container img{
+    width: 60%;
+    border: 1px solid red;
+
 }
 
 /* responsividade */
