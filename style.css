@@ -72,14 +72,11 @@ header .container {
     width: 50%;
     height: fit-content;
     padding: 0 100px;
-    
 }
 
 header .container img {
     display: none;
 }
-
-
 
 nav {
     display: flex;
@@ -114,28 +111,55 @@ nav ul{
 nav ul a svg {
     display:none;
 }
-
+/* SOBRE MIM */
 .about-me{
     display:flex;
     padding: 100px;
+    
 }
 
 .about-me .container{
     width: 50%;
     padding-right: 50px;
+    
+    
 }
 
 /* tamanho do container que abriga a imagem é de 50% da tela */
 .about-me .img-container{
     width: 50%;
     text-align: center;
+    position: relative;
+   
+    
+    
 }
 
 /* tamanho da imagem ocupando o espaço do container 100% do espaço */
 .about-me .img-container img{
     width: 60%;
-    border: 1px solid red;
+    height: 100%;
+    object-fit: cover;
+    background:var(--purple);
+    border-radius: 3px;
+    
+    
+    
+}
 
+.about-me .img-container .line {
+    width: calc(60% + 50px);
+    height: calc(100% + 50px);
+    
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 60%/2 - 25px);
+    border: 1px solid var(--purple);
+}
+
+.about-me .img-container .line.green {
+    transform: rotate(-3.3deg);
+     border: 1px solid var(--green);
 }
 
 /* responsividade */
@@ -153,8 +177,21 @@ nav ul a svg {
         padding: 0px;
     }
 
+    .about-me{
+        flex-direction: column;
+    }
 
- 
+    .about-me .container, .about-me .img-container{
+        width: 100%;
+    }
+
+    .about-me .container{
+        padding-right: 0;
+    }
+
+    .about-me .img-container{
+        margin: 70px 0;
+    }
 }
 
 /* tablet */
@@ -193,6 +230,7 @@ nav ul a svg {
         top:unset;
         width: 100%;
         padding: 0 15px;
+        z-index: 99;
     }
 
     nav ul a {
@@ -203,5 +241,9 @@ nav ul a svg {
         display: block;
         margin: 0 auto 10px;
 
+    }
+
+    .about-me{
+        padding: 40px;
     }
 }
