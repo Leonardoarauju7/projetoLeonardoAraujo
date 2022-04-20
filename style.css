@@ -5,7 +5,9 @@
  --purple: #5280e2;
  --green: #15cdcb; 
  --bg-dark:#212226;  
- --menu-height:75px;
+ --medium-grey:#2F3034;
+ 
+ --menu-height: 75px;
 }
 
 /*--------------CONFIGURAÇÃO GERAL------------------------*/
@@ -43,10 +45,25 @@ button{
     border: 0;
     border-radius:16px;
     padding: 8px 35px;
-    color:white;
     font-weight:bold;
     font-size: 18px;
+    cursor: pointer;
+}
+
+.secondari-button {
+    background: var(--medium-grey);
+    border: 1px solid var(--purple);
+    color: var(--green);
+    font-weight: bold;
+    height: 80px;
+   
+    display:flex;
+    align-items: center;
     
+}
+
+.secondary-button img {
+    margin-right: 15px;
 }
 
 .title-purple{
@@ -79,10 +96,15 @@ header .container img {
     display: none;
 }
 
+header .container button {
+    margin-top: 40px;
+}
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     height: var(--menu-height);
     background: var(--bg-dark);
     padding: 0 100px;
@@ -124,6 +146,10 @@ nav ul a svg {
 .about-me .container{
     width: 50%;
     padding-right: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content :center;
 }
 
 /* tamanho do container que abriga a imagem é de 50% da tela */
@@ -143,11 +169,14 @@ nav ul a svg {
 .about-me .img-container .line {
     width: calc(70% + 50px);
     height: calc(100% + 50px);
+    border: 1px solid var(--purple);
     
     position: absolute;
     top: -25px;
     left: calc(50% - 70%/2 - 25px);
-    border: 1px solid var(--purple);
+    
+    
+  
 }
 
 .about-me .img-container .line.green {
@@ -194,6 +223,165 @@ nav ul a svg {
     margin-left: 10px;
 }
 
+/*---------PORTIFÓLIO------------------*/
+
+.portifolio{ 
+    padding: 0 100px;
+    text-align: center;
+    margin-bottom: 100px ;
+    height: 800px;
+   
+    background-image: url('assets/portifolio-bg.png');
+
+}
+
+.portifolio .portifolio-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 60px auto 0;
+    margin-top: 130px;
+
+    
+}
+
+.portifolio .portifolio-container .portifolio-card{
+    background: radial-gradient (100% 100% at 0% 0%, rgba(255,255,255,0.33) 0%, rgba(255,255,255,0.) 100%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(42px);
+    border:1px solid #fff;
+
+    border-radius: 16px;
+    max-width: 360px;
+    text-align: left;
+    padding: 50px 25px ;
+    
+}
+
+.portifolio .portifolio-container .portifolio-card .img-container{
+    margin: 0 25px 50px;
+    position: relative;
+}
+
+.portifolio .portifolio-container .portifolio-card .img-container img{
+    width: 100%;
+}
+
+.portifolio-container .portifolio-card .img-container .line {
+    
+    width: calc(100% + 24px);
+    height: calc(100% + 24px);
+    border: 1px solid var(--green);
+    border-radius:16px;
+    transform : rotate(-1.93deg);    
+    
+    
+    position: absolute;
+    top: -12px;
+    left: calc(50% - 100%/2 - 12px);
+   
+    
+}
+
+.portifolio .portifolio-container .portifolio-card .language-container{
+    margin-bottom: 20px;
+}
+
+.portifolio .portifolio-container .portifolio-card .language-container ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    
+
+}
+
+.portifolio .portifolio-container .portifolio-card .language-container ul li{
+    color: var(--green);
+    border: 1px solid var(--green) ;
+    border-radius: 16px;
+    padding: 3px 15px;
+   
+}
+
+.portifolio-card .language-container ul li + li {
+    margin-left: 10px ;
+
+}
+
+
+.portifolio-card + .portifolio-card {
+    margin-left: 10px;
+}
+
+p {
+    margin: 0;
+}
+
+/*-------------CURRÍCULO---------------*/
+
+
+.curriculum{
+    padding: 0 100px;
+    text-align: center;
+}
+
+.curriculum .container {
+    display: flex;
+    margin: 50px auto;
+    max-width : 1200px;
+}
+
+.curriculum .container .content {
+    display: flex;
+    flex-direction: column;
+     justify-content:center;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+}
+
+
+.curriculum .container .content .curriculum-info {
+    display: grid;
+    grid-template-columns: 150px auto; 
+    text-align:center;
+    grid-gap: 1rem;
+    margin: 50px;
+   
+}
+
+.contact {
+    max-width: 700px;
+    margin: 150px auto 70px;
+    text-align: center;
+    padding: 0 20px;
+    
+}
+
+.contact h1 {
+    width: fit-content;
+    margin: 0 auto 40px;
+    background: -webkit-linear-gradient( #15CDCB, #5280E2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+
+}
+
+.contact  button{
+    margin: 40px auto;
+}
+
+.contact .social-media{
+    max-width: 360px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
 /*----------RESPONSIVIDADE------------- */
 
@@ -226,11 +414,11 @@ nav ul a svg {
         margin: 70px 0;
     }
 
-    .services {
+    .services, .portifolio {
         padding: 0;
     }
 
-    .services .services-container{
+    .services .services-container, .portifolio .portifolio-container{
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
@@ -240,10 +428,26 @@ nav ul a svg {
         height: 394px;
     }
 
-    .service-card + .service-card{
+    .service-card + .service-card, .portifolio-card + .portifolio-card {
         margin-left: 0;
         margin-top: 30px;
         
+    }
+    
+    .portifolio {
+        height:100%;
+    }
+
+    .curriculum .container {
+        flex-wrap: wrap;
+    }
+
+    
+    .curriculum .container .curriculum-img{
+        display: block;
+        margin: 0 auto 50px;
+        width: 100%;
+        max-width: 520px;
     }
 }
 
@@ -271,6 +475,10 @@ nav ul a svg {
 }
 /*------------CELULAR---------------------- */
 @media(max-width:480px) {
+
+    body{
+        margin-bottom: calc(var(--menu-height) + 50px);
+    }
     header .container {
         padding: 0 40px;
     }
@@ -279,7 +487,7 @@ nav ul a svg {
         position: fixed;
         width: 100%;
         bottom: 0;
-        top:unset;
+        top: unset;
         padding: 0 15px;
     }
 
@@ -301,8 +509,25 @@ nav ul a svg {
         margin : 70px 0;
     }
 
-    .services .services-container {
+    .services .services-container, .portifolio .portifolio-container {
         padding: 0 20px ;
     
     }
+
+    .portifolio .portifolio-container{
+            margin-top: 70px;
+    }
+
+    .portifolio {
+        margin: 100px 0 50px;
+    }
+
+    .curriculum {
+        padding: 0 20px;
+    }
+
+    .curriculum .container .content .curriculum-info {
+        padding: 0 15px;
+    }
+
 }
